@@ -1,17 +1,17 @@
-public class main {
+public class Main {
    public static void main(String[] args) {
       
-      vehicle v1 = new vehicle();
+      Vehicle v1 = new Vehicle();
          v1.brand = "Ford";
          v1.model = "Mustang";
          v1.year = 1993;
          
-      vehicle v2 = new vehicle();
+      Vehicle v2 = new Vehicle();
          v2.brand = "Toyota";
          v2.model = "Camry";
          v2.year = 2026;
 
-      vehicle v3 = new vehicle();
+      Vehicle v3 = new Vehicle();
          v3.brand = "Tesla";
          v3.model = "Model Y";
          v3.year = 2026;

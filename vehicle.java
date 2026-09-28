@@ -1,4 +1,4 @@
-public class vehicle {
+public class Vehicle {
 
    String brand;
    String model;
