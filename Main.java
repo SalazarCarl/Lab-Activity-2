@@ -1,35 +1,44 @@
 public class Main {
-   public static void main(String[] args) {
-      
-      Vehicle v1 = new Vehicle();
-         v1.brand = "Ford";
-         v1.model = "Mustang";
-         v1.year = 1993;
-         
-      Vehicle v2 = new Vehicle();
-         v2.brand = "Toyota";
-         v2.model = "Camry";
-         v2.year = 2026;
 
-      Vehicle v3 = new Vehicle();
-         v3.brand = "Tesla";
-         v3.model = "Model Y";
-         v3.year = 2026;
-      
-      System.out.println("\nVEHICLE 1");     
-      v1.displayInfo();
-      System.out.println("Age:" + v1.calculateAge());
-      System.out.println("Vintage:" + v1.isVintage());
-      
-      System.out.println("\nVEHICLE 2");   
-      v2.displayInfo();
-      System.out.println("Age:" + v2.calculateAge());
-      System.out.println("Vintage:" + v2.isVintage());
-
-      System.out.println("\nVEHICLE 3");   
-      v3.displayInfo();
-      System.out.println("Age:" + v2.calculateAge());
-      System.out.println("Vintage:" + v2.isVintage());
-
+   public static void printDetails (Vehicle vehicle){
+     vehicle.displayInfo();
    }
+
+   public static void main(String[] args) { 
+      Vehicle vehicle = new Car ("Honda", "Civic", 2019, 4);
+         vehicle.displayInfo();
+         System.out.println();
+      
+      vehicle = new Motorcycle ("Honda", "Click", 2022, "Automatic");
+         vehicle.displayInfo();
+         System.out.println();
+      
+      vehicle = new Truck ("Shacman", "H3000", 2023, 6);
+         vehicle.displayInfo();
+         System.out.println();
+      
+      System.out.println("\n=== Method Parameter===");
+         Car car = new Car("Honda", "City", 2023, 4);
+         Motorcycle motor = new Motorcycle("Yamaha", "Aerox", 2023, "Automatic");
+         Truck truck = new Truck("Kenworth", "T680", 2026, 18); 
+      
+      printDetails(car);
+      System.out.println();
+      printDetails(motor);
+      System.out.println();
+      printDetails(truck);
+      System.out.println();
+      
+      System.out.println("\n=====Polymorphic Array=====");
+      Vehicle[] vehicles = {
+         new Car("Toyota", "Wigo", 2024, 4),
+         new Motorcycle("Kawasaki", "zx25r", 2025, "Manual"),
+         new Truck("Scania", "R660", 2026, 12) 
+      };
+      
+         for(Vehicle currentVehicle : vehicles){
+            printDetails(currentVehicle);
+            System.out.println();
+         }
+      }
 }
