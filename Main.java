@@ -3,6 +3,13 @@ public class Main {
    public static void printDetails (Vehicle vehicle){
      vehicle.displayInfo();
    }
+   
+   public static void printAbstractDetails (Vehicle vehicle) {
+     vehicle.moveForward();
+     vehicle.moveBackward();
+     vehicle.moveLeft();
+     vehicle.moveRight();
+   }
 
    public static void main(String[] args) { 
       Vehicle vehicle = new Car ("Honda", "Civic", 2019, 4);
@@ -38,6 +45,7 @@ public class Main {
       
          for(Vehicle currentVehicle : vehicles){
             printDetails(currentVehicle);
+            printAbstractDetails(currentVehicle);
             System.out.println();
          }
       }
